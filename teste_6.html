@@ -1,0 +1,32 @@
+<!-- Calcular o IMC Pessoal e somar com o Imc de um amigo hipotético -->
+
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+
+}
+//Calculando o imc pessoal e o imc do meu amigo, para depois somar: 
+
+function calculaImc(pesoPessoal, alturaPessoal, pesoAmigo, alturaAmigo) {
+
+    let imcPessoal = pesoPessoal /(alturaPessoal*alturaPessoal);
+    let imcAmigo = pesoAmigo / (alturaAmigo*alturaAmigo);
+    let somaDosImcs = imcPessoal + imcAmigo;
+
+    mostra("O imc pessoal calculado foi " + imcPessoal);
+    mostra("O imc do seu amigo é " + imcAmigo);
+    mostra("A soma dos imc's é " + somaDosImcs);
+}
+
+calculaImc(68, 1.61, 78, 1.71);
+
+
+</script>

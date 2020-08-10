@@ -1,0 +1,26 @@
+<!-- Concatenação e variáveis -->
+
+<meta charset="UTF-8">
+
+<script>
+function pulaLinha() {
+    document.write("<br><br><br>");
+}
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+var ano = 2016 ; // variável ano recebe o valor 2016
+
+mostra(Math.round(455/2)); // função utilizada para arrendondar valores
+
+mostra("Flávio tem "+ (ano -1998) + " anos"); // usamos o + para concatenar
+
+mostra("Joaquim tem " + (ano-1992)+ " anos"); // a expressão ano-1992 vem em parênteses para evitar que o Javascript concatene esse trecho e o julgue como string
+
+ano = 2020; // aqui, o ano recebe um outro valor
+
+mostra("Ronan tem " + (ano-1975) + " anos");
+
+</script>

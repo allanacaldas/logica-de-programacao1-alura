@@ -1,0 +1,35 @@
+<!-- Campo de texto e botão -->
+
+<meta charset="UTF-8">
+
+
+<input />
+<!--Essa tag abre um campo para que possamos digitar algo -->
+
+<button>Compare com o meu segredo</button>
+
+<script>
+    var segredo = Math.round(Math.random() * 10);
+    var input = document.querySelector("input"); //O querySelector tem a função de selecionar a tag desejada
+    input.focus();
+
+    function verifica() { /* essa função não pode ser executada assim que a página carrega,
+     porque o programa sempre vai considerar o valor zero como input.value. O correto é chamá-la e associá-la ao clique do botão*/
+
+        if (input.value == segredo) {
+            /*Não podemos passar simplesmente input, porque o input corresponde a TAG e queremos dessa TAG seu valor (value). 
+        Por isso passamos input.value.*/
+            alert("Você acertou");
+
+        } else {
+            alert("Você errou!")
+        }
+        input.value = ""; // Permite que a caixinha fique "zerada" para inserirmos um novo número
+        input.focus(); //pra deixar a caixa em destaque
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verifica; /* Se eu mantiver os parênteses, a função será executada, dando erro no programa.
+Retirando os parênteses,  o onclick receberá somente o conteúdo da função 'verifica'*/
+
+</script>

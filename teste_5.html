@@ -1,0 +1,30 @@
+<!-- Calculando meu IMC Pessoal -->
+
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+
+}
+
+function calculaImc(peso, altura) {
+
+    let imc = peso /(altura*altura);
+    mostra("O imc pessoal calculado foi " + imc);
+
+}
+
+let pesoPessoal = 68;
+let alturaPessoal =  1.61;
+
+calculaImc(pesoPessoal, alturaPessoal);
+
+
+</script>

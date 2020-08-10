@@ -1,0 +1,32 @@
+<!-- Operações com Textos e Números -->
+
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() { // A função torna legível aquilo que queremos executar, além de permitir que coloquemos uma ou várias instruções.
+
+        document.write("<br><br>"); // Tudo que estiver dentro dessas chaves, é a ação que será executada.
+    }
+
+    function mostra(diferenca) {
+        
+        document.write(diferenca); // Tudo que estiver dentro dessas chaves, é a ação que será executada.
+        pulaLinha();
+
+    }
+
+    let idadeAllana = 27; // variáveis começam com letra minúscula
+    let idadeNathalia = 30;
+    let x = idadeNathalia - idadeAllana;
+    let media = (idadeAllana + idadeNathalia) / 2;
+
+    /*A primeira coisa que o JavaScript fará é identificar a presença de parênteses, que indiquem uma operação a ser priorizada.
+    Atenção: caso não tivéssemos separado as expressões por parênteses, o JS teria feito idadeNathalia/2 primeiro!*/
+
+    mostra("A diferença de idade é " + x);
+
+    mostra(420 / 10); // Não há string aqui, logo não há necessidade de aspas.
+
+    mostra("A média das idade é " + Math.round(media));
+
+</script>

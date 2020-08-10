@@ -1,0 +1,34 @@
+<!-- Futebol, uso do prompt e o uso do parseInt -->
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+
+    document.write("<br><br>");
+
+}
+
+function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+
+}
+
+let vitorias = parseInt(prompt("Entre com o número de vitórias do seu time")); 
+/* A função prompt sempre retorna algo no formato string, por isso o parseInt é usado pra converter uma string em número.
+Quando parseInt recebe um número e não uma string, ele devolve o mesmo número, ou seja, não realiza conversão alguma.*/
+
+let empates = parseInt(prompt("Entre com o número de empates do seu time")); 
+var pontos = (vitorias * 3) + (empates);
+
+mostra("Os pontos do seu time são " + pontos);
+
+mostra ("Fim");
+
+
+
+
+
+</script>

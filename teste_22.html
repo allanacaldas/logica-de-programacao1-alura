@@ -1,0 +1,42 @@
+<!-- Estrelas - repetições aninhadas -->
+
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+
+    }
+    
+    //Exemplo dado pelo professor
+
+    for (var linha = 1; linha <= 3; linha++) {
+        for (let coluna = 1; coluna <= 10; coluna++) {
+            document.write("*");
+
+        }
+        pulaLinha();
+    }
+
+    //Exemplo feito por mim
+
+    var contador = 1;
+
+    while (contador <= 4) {
+        for (let estrutura = 1; estrutura <= 10; estrutura++) {
+            document.write("#");
+
+        }
+
+        pulaLinha();
+        contador++;
+
+    }
+
+
+</script>

@@ -1,0 +1,44 @@
+<!-- Trabalhando com repetições - Todos os números entre 30 a 40, exceto 33 e 37! -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function pulaLinha() {
+
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+
+        }
+
+        var numero = 30;
+
+        while (numero<= 40) { //O while significa repetir enquanto a condição entre parênteses for verdade...
+            
+            if(numero == 33) { 
+                numero++;
+            }
+            else if(numero == 37){
+                numero++;
+            }
+
+            else{
+                mostra(numero);
+                numero++;
+            }
+            
+           
+        }
+
+        alert("Fim!")
+
+
+
+    </script>
+</head>

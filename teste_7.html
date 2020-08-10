@@ -1,0 +1,33 @@
+<!-- Calculando o IMC e aprendendo o retorno de funções -->
+
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+
+}
+
+function calculaImc(peso, altura) {
+
+    let imc = peso /(altura*altura);
+
+    return imc; // O return serve pra devolver um valor que entrará nas variáveis imcAllana e imcAmigo.
+                //return peso /(altura*altura); Também poderíamos fazer desse jeito
+}
+
+ var imcAllana = calculaImc(68, 1.61);
+ var imcAmigo = calculaImc(78, 1.71);
+ var somaDosImcs = imcAllana + imcAmigo;
+
+ mostra(imcAllana); 
+ mostra(imcAmigo);
+ mostra("A soma dos imc's é " + somaDosImcs);
+
+</script>

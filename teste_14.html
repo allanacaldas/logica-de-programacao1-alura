@@ -1,0 +1,32 @@
+<!-- Trabalhando com repetições - Exercícios com copas do mundo -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function pulaLinha() {
+
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+
+        }
+
+        var anoCopa = 1930;
+
+        while (anoCopa <= 2020) { //O while significa repetir enquanto a condição entre parênteses for verdade...
+            mostra("Teve copa em ano " + anoCopa);
+            anoCopa = anoCopa + 4;
+        }
+
+        alert("Fim!")
+
+
+
+    </script>
+</head>

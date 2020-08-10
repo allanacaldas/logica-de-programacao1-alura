@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function pulaLinha() {
+
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+
+        }
+
+        function adivinhar() {
+
+            var numeroPensado = Math.round(Math.random() * 10);
+            var tentativa = parseInt(prompt("Digite o seu chute: "));
+
+            if (tentativa == numeroPensado) {
+                mostra("Que sortudo! Você acertou!");
+            }
+            else {
+                mostra("Não foi dessa vez, o número pensando foi " + numeroPensado);
+            }
+        }
+
+        adivinhar();
+
+
+        mostra("fim");
+
+
+    </script>
+</head>
+
+</html>

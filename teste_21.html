@@ -1,0 +1,47 @@
+<!-- Jogo da adivinhação melhorado - Interrompendo uma repetição usando o break -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function pulaLinha() {
+
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+
+        }
+
+        var numeroPensado = Math.round(Math.random() * 10);
+        var tentativas = 1;
+        console.log(numeroPensado);
+
+        while (tentativas <= 3) {
+
+            var palpite = parseInt(prompt("Digite o seu chute: "));
+
+            if (palpite == numeroPensado) {
+
+                mostra("Que sortudo! Você acertou!");
+                tentativas = 4; // Poderíamos ter usado o break que tem essa função de interromper uma repetição, visto que se já acertamos o 'chute', não há razão pra continuar repetindo
+                
+            } else {
+
+                mostra("Não foi dessa vez!");
+                
+            }
+            tentativas++;
+        }
+
+        mostra("fim");
+
+
+    </script>
+</head>
+
+</html>

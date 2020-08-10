@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+
+<label>Coloque aqui seu chute</label>
+<input />
+<button>compare com o meu segredo</button>
+
+<script>
+
+    //Array
+    function sorteia() {
+
+        return Math.round(Math.random() * 10);
+    }
+
+    function listarNumeros(quantidade) {
+
+        var segredos = [];
+
+        for (var contador = 1; contador < quantidade; contador++) {
+            segredos.push(sorteia());
+        }
+        return segredos;
+    }
+
+    var segredos = listarNumeros(3);
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verifica() {
+
+        var achou = false;
+        for (var posicao = 0; posicao < segredos.length; posicao++) {
+
+            if (input.value == segredos[posicao]) {
+                alert("Você acertou");
+                achou = true;
+                break;
+            }
+        }
+
+        if (achou == false) {
+            alert("Você errou!")
+        }
+
+
+        input.value = ""; // Permite que a caixinha fique "zerada" para inserirmos um novo númeor
+        input.focus(); //pra deixar a caixa em destaque
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verifica; /* Se eu mantiver os parênteses, a função será executada, dando erro no programa.
+Retirando os parênteses,  o onclick receberá somente o conteúdo da função 'verifica'*/
+
+</script>

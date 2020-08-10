@@ -1,0 +1,31 @@
+<!-- Acumulando valores -->
+
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    //Pra um total  X de familiares, farei um total de X perguntas pela idade
+
+    var qtdeDeFamiliares = parseInt(prompt("Quantos familiares você tem na sua família?"));
+    var contador = 1; // é uma variável de incremento
+    var totalIdades = 0; // Ela foi colocada fora da função, porque se estivesse dentro zeraria todas as vezes que o laço while fosse se repetir.
+
+    while (contador <= qtdeDeFamiliares) {
+        var IdadeFamiliares = parseInt(prompt("Informe as idades dos seus familiares"));
+        totalIdades = totalIdades + IdadeFamiliares; // variável que armazena/acumula as idades dos familiares para cálculo posterior
+        contador++;
+    }
+
+    var mediaDasIdades = totalIdades / qtdeDeFamiliares;
+    mostra("A média das idades dos familiares é "+ mediaDasIdades);
+
+</script>

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><hr>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha(); 
+        //Uma função pode ter outra função como sua instrução
+    }
+
+    let descoberta = 1500;
+    let anoAtual = 2020;
+    let subtracao = anoAtual - descoberta;
+    let divisao = Math.round( subtracao / 28);
+
+    mostra("<h1>Desde 1500, tivemos " + divisao + " gerações de brasileiros</h1>");
+    // esse texto entre aspas (string) será entendida como parâmetro. Ou seja, esse texto será entendido como (frase)
+    mostra("<h3>Atualmente, estamos no ano de " + anoAtual + "</h3>"); 
+    // esse texto entre aspas (string) será entendida como parâmetro. Ou seja, esse texto será entendido como (frase)
+
+
+</script>

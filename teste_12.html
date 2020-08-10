@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- Jogo da adivinhação - Primeira Etapa -->
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function pulaLinha() {
+
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+
+        }
+
+        var numeroPensado = 5;
+        var chute = parseInt(prompt("digite seu chute!"));
+
+        if (chute == numeroPensado) {
+            mostra("Você acertou!");
+        }
+
+        else {
+            mostra("Você errou! O número pensado foi " + numeroPensado)
+        }
+
+
+    </script>
+</head>
+
+</html>
